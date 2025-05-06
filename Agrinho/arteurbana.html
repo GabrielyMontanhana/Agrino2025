@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arte Urbana - Festejando Campo & Cidade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="" width="100">
+          <h1>🎨 Arte Urbana</h1>
+          <nav>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="#atividades">Atividades</a></li>
+              <li><a href="#inscricao">Inscreva-se</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <section id="sobre" class="section">
+    <div class="container">
+      <h2>O que é Arte Urbana?</h2>
+      <p>
+        A arte urbana é uma expressão artística que leva a cidade a um novo nível de beleza e
+        cultura. Em nossa edição do evento, artistas urbanos irão se apresentar com murais,
+        grafites, intervenções e muito mais, celebrando a união entre a cidade e suas comunidades.
+      </p>
+    </div>
+  </section>
+
+  <section id="atividades" class="section">
+    <div class="container">
+      <h2>Atividades de Arte Urbana</h2>
+      <div class="galeria">
+        <div class="card">
+          <img src="https://s5.static.brasilescola.uol.com.br/be/2022/04/parede-grafite.jpg" alt="Grafite em mural">
+          <p>🎨 Grafite em Mural: Conheça a história por trás das obras.</p>
+        </div>
+        <div class="card">
+          <img src="https://watermark.lovepik.com/photo/20211130/large/lovepik-city-sculpture-picture_501280315.jpg" alt="Escultura urbana">
+          <p>🗿 Esculturas Urbanas: Arte que transforma o ambiente urbano.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.adsttc.com/media/images/5490/2e29/e58e/ce19/3800/00fc/large_jpg/pasos-peaton-kyrgyzstan.jpg?1418735137" alt="Intervenção urbana">
+          <p>✏️ Intervenções Urbanas: Arte interativa nas ruas da cidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inscricao" class="section">
+    <div class="container">
+      <h2>Quero Participar!</h2>
+      <form id="form-arte-urbana">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="atividade">Escolha a Atividade:</label>
+        <select id="atividade" name="atividade" required>
+          <option value="">Selecione</option>
+          <option value="grafite">Grafite em Mural</option>
+          <option value="escultura">Escultura Urbana</option>
+          <option value="intervencao">Intervenção Urbana</option>
+        </select>
+
+        <button type="submit">Enviar Inscrição</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Festejando Campo & Cidade - Arte Urbana</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("form-arte-urbana").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const atividade = document.getElementById("atividade").value;
+      alert(`Inscrição confirmada, ${nome}! Você está inscrito para a atividade: ${atividade === "grafite" ? "Grafite em Mural" : atividade === "escultura" ? "Escultura Urbana" : "Intervenção Urbana"}!`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>

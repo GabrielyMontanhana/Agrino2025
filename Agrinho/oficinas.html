@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oficinas Rurais - Festejando Campo & Cidade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+        <img src="logo.png" alt="" width="100">
+      <h1>🌾 Oficinas Rurais</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#atividades">Atividades</a></li>
+          <li><a href="#inscricao">Inscreva-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2>Conecte-se com as Raízes</h2>
+      <p>
+        As Oficinas Rurais são espaços de aprendizado e troca de saberes do campo. Venha experimentar práticas sustentáveis, artesanato rural, culinária caipira e muito mais!
+      </p>
+    </div>
+  </section>
+
+  <section id="atividades" class="section">
+    <div class="container">
+      <h2>Atividades das Oficinas</h2>
+      <div class="galeria">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK9ocPHCPhC5Zy-wfaEXZeSd8hk4TN9ja2Nw&s" alt="Oficina de Horta Orgânica">
+          <p>🌱 Horta Orgânica: aprenda a plantar e colher alimentos saudáveis em casa.</p>
+        </div>
+        <div class="card">
+          <img src="https://i.pinimg.com/474x/77/64/62/77646225f50cbd2ca183b558b5a290c0.jpg" alt="Oficina de Pão Caseiro">
+          <p>🍞 Pão Caseiro no Forno a Lenha: tradição e sabor direto da roça.</p>
+        </div>
+        <div class="card">
+          <img src="https://blog.7mboots.com.br/wp-content/uploads/2025/01/blog-2698.jpg" alt="Artesanato rural">
+          <p>🎨 Artesanato Rural: técnicas com palha, madeira e argila.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inscricao" class="section">
+    <div class="container">
+      <h2>Quero Participar!</h2>
+      <form id="form-oficinas">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="oficina">Escolha a Oficina:</label>
+        <select id="oficina" name="oficina" required>
+          <option value="">Selecione</option>
+          <option value="horta">Horta Orgânica</option>
+          <option value="pao">Pão Caseiro</option>
+          <option value="artesanato">Artesanato Rural</option>
+        </select>
+
+        <button type="submit">Enviar Inscrição</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Festejando Campo & Cidade - Oficinas Rurais</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("form-oficinas").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const oficina = document.getElementById("oficina").value;
+      alert(`Inscrição confirmada, ${nome}! Te esperamos na oficina de ${oficina === "horta" ? "Horta Orgânica" : oficina === "pao" ? "Pão Caseiro" : "Artesanato Rural"}!`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
