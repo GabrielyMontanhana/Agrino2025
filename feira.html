@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feira de Sabores - Festejando Campo & Cidade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+        <img src="logo.png" alt="" width="100">
+      <h1>🍇 Feira de Sabores</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#galeria">Produtos</a></li>
+          <li><a href="#formulario">Participar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="sobre" class="section">
+    <div class="container">
+      <h2>Sabores que conectam</h2>
+      <p>
+        A Feira de Sabores reúne o melhor da produção rural, artesanal e culinária local.
+        Delicie-se com queijos, doces, pães, vinhos, conservas, geleias e muito mais – tudo feito com carinho por produtores do campo.
+      </p>
+    </div>
+  </section>
+
+  <section id="galeria" class="section">
+    <div class="container">
+      <h2>Destaques da Feira</h2>
+      <div class="galeria">
+        <div class="card">
+          <img src="https://www.serradacanastra.com.br/wp-content/uploads/2021/03/xqueijos.jpg.pagespeed.ic_.8rIOyaOnFu.jpg" alt="Queijos artesanais">
+          <p>🧀 Queijos Artesanais</p>
+        </div>
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqlqNM5UFZhxFUobIEjcF3DTwE6Hm83Pnt3Q&s" alt="Geleias caseiras">
+          <p>🍓 Geleias de Frutas do Campo</p>
+        </div>
+        <div class="card">
+          <img src="https://saboresdacidade.com/wp-content/uploads/2023/01/Paine-959x1024.jpeg" alt="Pães artesanais">
+          <p>🍞 Pães Rústicos e Bolos Caipiras</p>
+        </div>
+        <div class="card">
+          <img src="https://1.bp.blogspot.com/-x9S1ywpNBjI/YI7yyJmcIDI/AAAAAAAA6f8/y7jivBjaoO8NR3F9lXt8WGHtbYl0v9eLQCLcBGAsYHQ/s1440/Sitio%2BTalism%25C3%25A3%2Bs%25C3%25A3o%2BRoque%2B%25281%2529.jpg" alt="Doces caseiros">
+          <p>🍬 Doces Tradicionais</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="formulario" class="section">
+    <div class="container">
+      <h2>Quero Participar!</h2>
+      <form id="form-feira">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="tipo">Você é:</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecione</option>
+          <option value="produtor">Produtor / Expositor</option>
+          <option value="visitante">Visitante</option>
+        </select>
+
+        <label for="produto">Se for produtor, descreva seu produto:</label>
+        <textarea id="produto" name="produto" rows="3" placeholder="Ex: Geleia de amora artesanal..."></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Festejando Campo & Cidade - Feira de Sabores</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("form-feira").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const tipo = document.getElementById("tipo").value;
+
+      let mensagem = `Obrigado, ${nome}! `;
+
+      if (tipo === "produtor") {
+        mensagem += "Em breve entraremos em contato para detalhar sua participação como expositor.";
+      } else {
+        mensagem += "Esperamos você na Feira de Sabores!";
+      }
+
+      alert(mensagem);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
